@@ -1,0 +1,14 @@
+body{
+    font-family: "Poppins";
+}
+
+header{
+    height: $nav-height;
+    background-color: $nav-background;
+
+}
+
+.nav-container{
+    max-width: $content-width;
+    margin: 0 auto;
+}
