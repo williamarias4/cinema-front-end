@@ -22,8 +22,6 @@ header {
     text-transform: uppercase;
     font-size: 1.4em;
 
-    &:hover {}
-
     a,
     a:visited {
         color: $nav-font-color;
@@ -68,19 +66,4 @@ nav {
         }
     }
 
-}
-
-button{
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    font-size: large;
-    color: white;
-}
-
-input[type=search] {
-    width: 400px;
-    padding: 10px;
-    margin: 5px;
-    font-size: large;
 }
