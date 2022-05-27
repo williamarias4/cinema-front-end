@@ -1,10 +1,12 @@
 body {
+    margin: 0;
     font-family: "Poppins";
 }
 
 header {
     height: $nav-height;
     background-color: $nav-background;
+    
 }
 
 .nav-container {
@@ -14,7 +16,7 @@ header {
 
 .brand {
     position: absolute;
-    padding-left: 20px;
+    padding-left: 30px;
     float: left;
     line-height: $nav-height;
     text-transform: uppercase;
@@ -31,18 +33,20 @@ header {
 
 nav {
     float: right;
-    margin: 6px;
-    padding: 0;
 
     ul {
         list-style: none;
-
+        margin: 0;
+        padding: 0;
         li {
+            
             float: left;
-
+            position: relative;
             a {
+                display: block;
                 font-size: large;
                 padding: 10px;
+                line-height: 50px;
                 color: $nav-font-color;
                 text-decoration: none;
             }
@@ -51,14 +55,32 @@ nav {
 
     .search-bar {
         float: left;
-        padding-left: 30px;
-        padding-bottom: 300px;
+        padding-left: 50px;
+        margin-right: 30px;
+        line-height: 70px;
+        button{
+            background-color: $btn-green-color;
+            
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: green;
+        }
     }
 
 }
 
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: large;
+    color: white;
+}
+
 input[type=search] {
-    //width: 300px;
+    width: 400px;
     padding: 10px;
+    margin: 5px;
     font-size: large;
 }
