@@ -1,14 +1,64 @@
-body{
+body {
     font-family: "Poppins";
 }
 
-header{
+header {
     height: $nav-height;
     background-color: $nav-background;
+}
+
+.nav-container {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+
+    &:hover {}
+
+    a,
+    a:visited {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+}
+
+nav {
+    float: right;
+    margin: 6px;
+    padding: 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            float: left;
+
+            a {
+                font-size: large;
+                padding: 10px;
+                color: $nav-font-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .search-bar {
+        float: left;
+        padding-left: 30px;
+        padding-bottom: 300px;
+    }
 
 }
 
-.nav-container{
-    max-width: $content-width;
-    margin: 0 auto;
+input[type=search] {
+    //width: 300px;
+    padding: 10px;
+    font-size: large;
 }
