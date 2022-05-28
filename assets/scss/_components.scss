@@ -13,6 +13,21 @@ input[type=search] {
     font-size: large;
 }
 
+.brand {
+    position: absolute;
+    padding-left: 30px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+
+    a,
+    a:visited {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+}
+
 .nav-hamburguer {
     display: none;
     position: absolute;
@@ -114,4 +129,14 @@ input[type=search] {
     .nav-list {
         display: block !important;
     }
+}
+
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    display: block;
+    text-align: center;
 }

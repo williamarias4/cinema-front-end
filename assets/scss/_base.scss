@@ -14,21 +14,6 @@ header {
     margin: 0 auto;
 }
 
-.brand {
-    position: absolute;
-    padding-left: 30px;
-    float: left;
-    line-height: $nav-height;
-    text-transform: uppercase;
-    font-size: 1.4em;
-
-    a,
-    a:visited {
-        color: $nav-font-color;
-        text-decoration: none;
-    }
-}
-
 nav {
     float: right;
 
