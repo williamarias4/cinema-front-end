@@ -69,6 +69,11 @@ nav .search-bar button:hover {
   background-color: green;
 }
 
+.img-container img {
+  display: block;
+  margin: 0 auto;
+}
+
 button {
   border: none;
   border-radius: 5px;
