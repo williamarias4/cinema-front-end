@@ -16,7 +16,7 @@ input[type=search] {
 .brand {
     position: absolute;
     padding-left: 30px;
-    float: left;//position-fixed
+    float: left; //position-fixed
     line-height: $nav-height;
     text-transform: uppercase;
     font-size: 1.4em;
@@ -41,9 +41,10 @@ input[type=search] {
 @media only screen and (max-width: $breakpoint) {
     .nav-hamburguer {
         display: block;
-        
+
     }
-    #btnSearchMovie{
+
+    #btnSearchMovie {
         display: block;
         margin: 0 auto;
     }
@@ -132,12 +133,22 @@ input[type=search] {
     }
 }
 
-.img-responsive{
+.img-responsive {
     width: 100%;
     height: auto;
 }
 
-h2{
+h2 {
     display: block;
     text-align: center;
+}
+
+#table-available-movies {
+    tr {
+        color: aqua;
+        img{
+            width: 50%;
+            height: auto;
+        }
+    }
 }

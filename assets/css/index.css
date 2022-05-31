@@ -195,3 +195,12 @@ h2 {
   display: block;
   text-align: center;
 }
+
+#table-available-movies tr {
+  color: aqua;
+}
+
+#table-available-movies tr img {
+  width: 50%;
+  height: auto;
+}
