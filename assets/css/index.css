@@ -40,7 +40,6 @@ nav ul li a {
 
 nav .search-bar {
   float: left;
-  padding-left: 50px;
   margin-right: 30px;
   line-height: 70px;
 }
@@ -102,6 +101,10 @@ input[type=search] {
 @media only screen and (max-width: 1200px) {
   .nav-hamburguer {
     display: block;
+  }
+  #btnSearchMovie {
+    display: block;
+    margin: 0 auto;
   }
   nav {
     width: 100%;
