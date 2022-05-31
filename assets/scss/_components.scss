@@ -16,7 +16,7 @@ input[type=search] {
 .brand {
     position: absolute;
     padding-left: 30px;
-    float: left;
+    float: left;//position-fixed
     line-height: $nav-height;
     text-transform: uppercase;
     font-size: 1.4em;
@@ -44,7 +44,8 @@ input[type=search] {
         
     }
     #btnSearchMovie{
-        
+        display: block;
+        margin: 0 auto;
     }
 
     nav {
