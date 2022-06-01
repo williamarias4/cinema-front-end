@@ -1,8 +1,4 @@
 //POSTER PATH IS IMG
-var table_size = {
-    rows: 2,
-    cols: 6
-}
 
 let generate_url = (base_url, id, query_string, api_key) =>
     base_url + id + query_string + api_key;
@@ -49,16 +45,41 @@ let get_movie_list = (data) => {
     }
 }
 
-function load_available_movies(movie){
+function load_available_movies(movie) {
     let table = document.getElementById("table-available-movies");
-    let rows_length = table.rows_length;
-    let row =  table.insertRow();
-    let img = document.createElement("img");
-    img.src = moviedb.base_img_url + movie.poster_path;
-    row.appendChild(img);
+    if (table) {
+        let rows_length_aux = table.rows.length;
+        if (rows_length_aux === 0) {
+            let row = table.insertRow();
+            let col = row.insertCell();
+            let img = document.createElement("img");
+            img.src = moviedb.base_img_url + movie.poster_path;
+            col.appendChild(img);
+        }
+        else if (rows_length_aux <= movie_table_size.rows) {
+            let cols_length_aux = table.rows[rows_length_aux - 1].cells.length;
+            console.log(cols_length_aux);
+            if (cols_length_aux < movie_table_size.cols) {
+                let col = table.rows[rows_length_aux - 1].insertCell();
+                let img = document.createElement("img");
+                img.src = moviedb.base_img_url + movie.poster_path;
+                col.appendChild(img);
+            }
+            else if (cols_length_aux === movie_table_size.cols && rows_length_aux < movie_table_size.rows) {
+                let row = table.insertRow();
+                let col = row.insertCell();
+                let img = document.createElement("img");
+                img.src = moviedb.base_img_url + movie.poster_path;
+                col.appendChild(img);
+            }
+        }
+
+
+    }
 }
 
-window.onload = () => load_available_movies();
+//window.onload gives an exception
+document.onload = () => load_available_movies();
 
 let test_callback = (movie) => console.log(movie.original_title, movie.poster_path);
 
