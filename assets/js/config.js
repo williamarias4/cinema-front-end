@@ -5,3 +5,9 @@ const moviedb = {
     api_query_param: "?api_key=",
     movie_ids_path: "public/movie_ids.json"
 }
+
+const movie_table_size = {
+    rows: 2,
+    cols: 6
+}
+
