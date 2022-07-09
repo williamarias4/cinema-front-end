@@ -196,6 +196,12 @@ h2 {
   text-align: center;
 }
 
+#table-available-movies {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+}
+
 #table-available-movies tr {
   color: aqua;
 }
