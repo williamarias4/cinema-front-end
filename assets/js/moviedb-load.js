@@ -49,28 +49,44 @@ function load_available_movies(movie) {
     let table = document.getElementById("table-available-movies");
     if (table) {
         let rows_length_aux = table.rows.length;
+
         if (rows_length_aux === 0) {
             let row = table.insertRow();
             let col = row.insertCell();
+
+            let div = document.createElement("div");
+            div.setAttribute('class', 'image_box');
+
             let img = document.createElement("img");
             img.src = moviedb.base_img_url + movie.poster_path;
-            col.appendChild(img);
+
+            col.appendChild(div);
+            //col.appendChild(img);
+            div.appendChild(img);
         }
         else if (rows_length_aux <= movie_table_size.rows) {
             let cols_length_aux = table.rows[rows_length_aux - 1].cells.length;
             console.log(cols_length_aux);
             if (cols_length_aux < movie_table_size.cols) {
                 let col = table.rows[rows_length_aux - 1].insertCell();
+                let div = document.createElement("div");
+                div.setAttribute('class', 'image_box');
                 let img = document.createElement("img");
                 img.src = moviedb.base_img_url + movie.poster_path;
-                col.appendChild(img);
+                col.appendChild(div);
+                div.appendChild(img);
+                //col.appendChild(img);
             }
             else if (cols_length_aux === movie_table_size.cols && rows_length_aux < movie_table_size.rows) {
                 let row = table.insertRow();
                 let col = row.insertCell();
+                let div = document.createElement("div");
+                div.setAttribute('class', 'image_box');
                 let img = document.createElement("img");
                 img.src = moviedb.base_img_url + movie.poster_path;
-                col.appendChild(img);
+                //col.appendChild(img);
+                col.appendChild(div);
+                div.appendChild(img);
             }
         }
 
@@ -79,12 +95,11 @@ function load_available_movies(movie) {
 }
 
 //window.onload gives an exception
-document.onload = () => load_available_movies();
+//document.onload = () => load_available_movies();
 
 let test_callback = (movie) => console.log(movie.original_title, movie.poster_path);
 
 get_movies_id();
-
 
 
 //getJSON(generate_url(moviedb.base_url, "315635", moviedb.api_query_param, moviedb.api_key));
