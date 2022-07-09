@@ -144,11 +144,15 @@ h2 {
 }
 
 #table-available-movies {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
     tr {
         color: aqua;
         img{
             width: 100%;
             height: auto;
         }
+
     }
 }
