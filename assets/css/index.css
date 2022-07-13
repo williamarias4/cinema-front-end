@@ -197,16 +197,36 @@ h2 {
 }
 
 #table-available-movies {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 3%;
   padding-top: 30px;
 }
 
 #table-available-movies tr {
-  color: aqua;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
 }
 
-#table-available-movies tr img {
-  width: 100%;
+#table-available-movies tr .image_box {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+          box-shadow: 2px 2px 2px #ccc;
+}
+
+#table-available-movies tr .image_box img {
+  width: 90%;
   height: auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#table-available-movies tr .image_box img:hover {
+  width: 100%;
+}
+
+#table-available-movies tr .image_box .title_box {
+  -webkit-box-shadow: 3px 2px 3px #ccc;
+          box-shadow: 3px 2px 3px #ccc;
 }

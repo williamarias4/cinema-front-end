@@ -144,15 +144,34 @@ h2 {
 }
 
 #table-available-movies {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 3%;
+    //padding-right: 100px;
     padding-top: 30px;
+    //table-layout: fixed;
+
     tr {
-        color: aqua;
-        img{
-            width: 100%;
-            height: auto;
+        box-sizing: border-box;
+        text-align: center;
+
+        .image_box {
+            transition: 0.5s;
+            overflow: hidden;
+            box-shadow: 2px 2px 2px #ccc;
+            img {
+                width: 90%;
+                height: auto;
+                transition: 1s;
+
+                &:hover{
+                    width: 100%;
+                }
+            }
+
+            .title_box{
+                box-shadow: 3px 2px 3px #ccc;
+            }
         }
+
 
     }
 }
