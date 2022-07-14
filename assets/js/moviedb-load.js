@@ -19,9 +19,13 @@ function load_available_movies(movie) {
             div_class_image_box.setAttribute('class', 'image_box');
             //div.setAttribute('style', 'width:200px; height:359px;');
 
+            let btn_schedule = document.createElement("a");
+            btn_schedule.setAttribute('class', 'text_btn');
+            btn_schedule.textContent = "July 30th, 7:00PM / C3";
+
             let p_movie_title = document.createElement("p");
+            //p_movie_title.setAttribute('class', 'testclass');
             p_movie_title.textContent = movie.original_title;
-            //p.setAttribute('style', 'display:block');
 
             let img = document.createElement("img");
             img.src = moviedb.base_img_url + movie.poster_path;
@@ -30,6 +34,7 @@ function load_available_movies(movie) {
             //col.appendChild(img);
             div_class_image_box.appendChild(img);
             //div.appendChild(p);
+            div_class_image_box.appendChild(btn_schedule);
             div_class_image_box.appendChild(p_movie_title);
 
         }
