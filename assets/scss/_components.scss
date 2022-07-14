@@ -157,18 +157,43 @@ h2 {
             transition: 0.5s;
             overflow: hidden;
             box-shadow: 2px 2px 2px #ccc;
+            
             img {
                 width: 90%;
                 height: auto;
                 transition: 1s;
-
-                &:hover{
+                
+                &:hover {
                     width: 100%;
+                    opacity: 50%;
+
                 }
+
+                &:hover+.text_btn {
+                    
+                    display: block;
+                    opacity: 100%;
+                    color: black;
+                    pointer-events: none;
+                    display: inline;
+                }
+
+
             }
 
-            .title_box{
-                box-shadow: 3px 2px 3px #ccc;
+            .text_btn {
+
+                //display: none;
+                position: relative;
+                opacity: 0%;
+                transition: 1s;
+                top: -170px;
+            }
+
+            p{
+                position: relative;
+                //font-size: large;
+                top:-20px;
             }
         }
 
