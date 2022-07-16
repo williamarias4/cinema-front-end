@@ -19,9 +19,24 @@ function load_available_movies(movie) {
             div_class_image_box.setAttribute('class', 'image_box');
             //div.setAttribute('style', 'width:200px; height:359px;');
 
+            let div_schedule_container = document.createElement("div");
+            div_schedule_container.setAttribute('class', 'schedule_container');
+
             let btn_schedule = document.createElement("a");
             btn_schedule.setAttribute('class', 'text_btn');
             btn_schedule.textContent = "July 30th, 7:00PM / C3";
+
+            let btn_schedule2 = document.createElement("a");
+            btn_schedule2.setAttribute('class', 'text_btn');
+            btn_schedule2.textContent = "July 30th, 7:00PM / C3";
+
+            let btn_schedule3 = document.createElement("a");
+            btn_schedule3.setAttribute('class', 'text_btn');
+            btn_schedule3.textContent = "July 30th, 7:00PM / C3";
+
+            let br = document.createElement("br");
+
+            let br2 = document.createElement("br");
 
             let p_movie_title = document.createElement("p");
             //p_movie_title.setAttribute('class', 'testclass');
@@ -34,7 +49,12 @@ function load_available_movies(movie) {
             //col.appendChild(img);
             div_class_image_box.appendChild(img);
             //div.appendChild(p);
-            div_class_image_box.appendChild(btn_schedule);
+            div_schedule_container.appendChild(btn_schedule);
+            div_schedule_container.appendChild(br);
+            div_schedule_container.appendChild(btn_schedule2);
+            div_schedule_container.appendChild(br2);
+            div_schedule_container.appendChild(btn_schedule3);
+            div_class_image_box.appendChild(div_schedule_container);
             div_class_image_box.appendChild(p_movie_title);
 
         }
@@ -49,6 +69,13 @@ function load_available_movies(movie) {
                 div_class_image_box.setAttribute('class', 'image_box');
                 //div.setAttribute('style', 'width:200px; height:359px;');
 
+                let div_schedule_container = document.createElement("div");
+                div_schedule_container.setAttribute('class', 'schedule_container');
+
+                let btn_schedule = document.createElement("a");
+                btn_schedule.setAttribute('class', 'text_btn');
+                btn_schedule.textContent = "July 30th, 7:00PM / C3";
+
                 let p_movie_title = document.createElement("p");
                 p_movie_title.textContent = movie.original_title;
 
@@ -57,6 +84,8 @@ function load_available_movies(movie) {
 
                 col.appendChild(div_class_image_box);
                 div_class_image_box.appendChild(img);
+                div_schedule_container.appendChild(btn_schedule);
+                div_class_image_box.appendChild(div_schedule_container);
                 div_class_image_box.appendChild(p_movie_title);
                 //col.appendChild(img);
             }
@@ -69,6 +98,13 @@ function load_available_movies(movie) {
                 div_class_image_box.setAttribute('class', 'image_box');
                 //div.setAttribute('style', 'width:200px; height:359px;');
 
+                let div_schedule_container = document.createElement("div");
+                div_schedule_container.setAttribute('class', 'schedule_container');
+
+                let btn_schedule = document.createElement("a");
+                btn_schedule.setAttribute('class', 'text_btn');
+                btn_schedule.textContent = "July 30th, 7:00PM / C3";
+
                 let p_movie_title = document.createElement("p");
                 p_movie_title.textContent = movie.original_title;
 
@@ -78,6 +114,8 @@ function load_available_movies(movie) {
                 //col.appendChild(img);
                 col.appendChild(div_class_image_box);
                 div_class_image_box.appendChild(img);
+                div_schedule_container.appendChild(btn_schedule);
+                div_class_image_box.appendChild(div_schedule_container);
                 div_class_image_box.appendChild(p_movie_title);
             }
         }

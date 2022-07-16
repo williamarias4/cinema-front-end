@@ -1,4 +1,4 @@
-function getFetch(url, callback) {
+function getFetch(url, callback, options) {
     fetch(url, {
         method: "GET",
         headers: {
