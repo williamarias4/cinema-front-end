@@ -213,6 +213,7 @@ h2 {
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 2px #ccc;
           box-shadow: 2px 2px 2px #ccc;
+  position: relative;
 }
 
 #table-available-movies tr .image_box img {
@@ -224,26 +225,29 @@ h2 {
 
 #table-available-movies tr .image_box img:hover {
   width: 100%;
-  opacity: 50%;
+  opacity: 20%;
 }
 
-#table-available-movies tr .image_box img:hover + .text_btn {
-  display: block;
+#table-available-movies tr .image_box img:hover + .schedule_container {
   opacity: 100%;
   color: black;
   pointer-events: none;
-  display: inline;
 }
 
-#table-available-movies tr .image_box .text_btn {
-  position: relative;
+#table-available-movies tr .image_box .schedule_container {
   opacity: 0%;
   -webkit-transition: 1s;
   transition: 1s;
-  top: -170px;
+  bottom: 100px;
+  left: 100px;
+  position: absolute;
+}
+
+#table-available-movies tr .image_box .schedule_container .text_btn {
+  font-size: large;
+  cursor: pointer;
 }
 
 #table-available-movies tr .image_box p {
   position: relative;
-  top: -20px;
 }

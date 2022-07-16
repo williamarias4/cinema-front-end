@@ -157,43 +157,46 @@ h2 {
             transition: 0.5s;
             overflow: hidden;
             box-shadow: 2px 2px 2px #ccc;
-            
+            position: relative;
+
             img {
                 width: 90%;
                 height: auto;
                 transition: 1s;
-                
+
                 &:hover {
                     width: 100%;
-                    opacity: 50%;
-
+                    opacity: 20%;
                 }
 
-                &:hover+.text_btn {
-                    
-                    display: block;
+                &:hover+.schedule_container {
+                    // .text_btn {
+
                     opacity: 100%;
                     color: black;
                     pointer-events: none;
-                    display: inline;
                 }
-
-
             }
 
-            .text_btn {
-
-                //display: none;
-                position: relative;
+            .schedule_container {
+                //display:none;
                 opacity: 0%;
                 transition: 1s;
-                top: -170px;
+                //position: fixed;
+                bottom: 100px;
+                left: 100px;
+                //position: relative;
+                position: absolute;
+
+                .text_btn {
+                    font-size: large;
+                    cursor: pointer;
+                }
+
             }
 
-            p{
+            p {
                 position: relative;
-                //font-size: large;
-                top:-20px;
             }
         }
 
