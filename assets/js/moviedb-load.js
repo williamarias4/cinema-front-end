@@ -5,6 +5,10 @@ import getFetch from '/assets/js/fetch-method.js';
 let generate_url = (base_url, id, query_string, api_key) =>
     base_url + id + query_string + api_key;
 
+var isMouseHoverDiv = false;
+var isMouseHoverImg = false;
+
+
 function load_available_movies(movie) {
     let table = document.getElementById("table-available-movies");
     if (table) {
@@ -21,6 +25,8 @@ function load_available_movies(movie) {
 
             let div_schedule_container = document.createElement("div");
             div_schedule_container.setAttribute('class', 'schedule_container');
+            div_schedule_container.setAttribute('id', 'test');
+
 
             let btn_schedule = document.createElement("a");
             btn_schedule.setAttribute('class', 'text_btn');
@@ -43,7 +49,40 @@ function load_available_movies(movie) {
             p_movie_title.textContent = movie.original_title;
 
             let img = document.createElement("img");
+            //img.setAttribute('id', 'test');
             img.src = moviedb.base_img_url + movie.poster_path;
+
+            div_schedule_container.addEventListener('mouseover', function () {
+                isMouseHoverDiv = true;
+                if (isMouseHoverDiv === true || isMouseHoverImg === true) {
+                    img.style.width = "100%";
+                    img.style.opacity = "20%";
+                }
+            })
+            div_schedule_container.addEventListener('mouseout', function () {
+                isMouseHoverDiv = false;
+                if (isMouseHoverDiv === false && isMouseHoverImg === false) {
+                    img.style.width = "90%";
+                    img.style.opacity = "100%";
+                }
+            })
+
+            img.addEventListener('mouseover', function () {
+                isMouseHoverDiv = true;
+                if (isMouseHoverDiv === true || isMouseHoverImg === true) {
+                    img.style.width = "100%";
+                    img.style.opacity = "20%";
+                }
+            })
+            img.addEventListener('mouseout', function () {
+                isMouseHoverDiv = false;
+                if (isMouseHoverDiv === false && isMouseHoverImg === false) {
+                    img.style.width = "90%";
+                    img.style.opacity = "100%";
+                }
+
+            })
+
 
             col.appendChild(div_class_image_box);
             //col.appendChild(img);
@@ -139,6 +178,8 @@ let get_movies_id = () => getFetch(moviedb.movie_ids_path, get_movie_list);
 //document.onload = () => load_available_movies();
 
 get_movies_id();
+
+//test();
 
 //getJSON(generate_url(moviedb.base_url, "315635", moviedb.api_query_param, moviedb.api_key));
 

@@ -38,17 +38,17 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav .search-bar {
+nav ul .search-bar {
   float: left;
   margin-right: 30px;
   line-height: 70px;
 }
 
-nav .search-bar button {
+nav ul .search-bar button {
   background-color: #367588;
 }
 
-nav .search-bar button:hover {
+nav ul .search-bar button:hover {
   cursor: pointer;
   background-color: #2f4f4f;
 }
@@ -56,36 +56,6 @@ nav .search-bar button:hover {
 .img-container img {
   display: block;
   margin: 0 auto;
-}
-
-button {
-  border: none;
-  border-radius: 5px;
-  padding: 12px;
-  font-size: large;
-  color: white;
-}
-
-input[type=search] {
-  width: 400px;
-  padding: 10px;
-  margin: 5px;
-  font-size: large;
-}
-
-.brand {
-  position: absolute;
-  padding-left: 30px;
-  float: left;
-  line-height: 70px;
-  text-transform: uppercase;
-  font-size: 1.4em;
-}
-
-.brand a,
-.brand a:visited {
-  color: #0c0c0c;
-  text-decoration: none;
 }
 
 .nav-hamburguer {
@@ -98,7 +68,7 @@ input[type=search] {
   width: 70px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1140px) {
   .nav-hamburguer {
     display: block;
   }
@@ -125,6 +95,14 @@ input[type=search] {
   }
   nav ul li ul li a {
     padding-left: 30px;
+  }
+  nav ul .search-bar {
+    width: 100%;
+  }
+  nav ul .search-bar input[type=search] {
+    width: 360px;
+    margin: 10px auto;
+    display: block;
   }
   .nav-dropdown {
     position: static;
@@ -180,10 +158,40 @@ input[type=search] {
           transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   .nav-list {
     display: block !important;
   }
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: large;
+  color: white;
+}
+
+input[type=search] {
+  width: 400px;
+  padding: 10px;
+  margin: 5px;
+  font-size: large;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 30px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.brand a,
+.brand a:visited {
+  color: #0c0c0c;
+  text-decoration: none;
 }
 
 .img-responsive {
@@ -199,6 +207,8 @@ h2 {
 #table-available-movies {
   padding-left: 3%;
   padding-top: 30px;
+  display: block;
+  overflow-x: auto;
 }
 
 #table-available-movies tr {
@@ -231,23 +241,43 @@ h2 {
 #table-available-movies tr .image_box img:hover + .schedule_container {
   opacity: 100%;
   color: black;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 #table-available-movies tr .image_box .schedule_container {
   opacity: 0%;
   -webkit-transition: 1s;
   transition: 1s;
-  bottom: 100px;
-  left: 100px;
+  display: block;
+  top: 30%;
+  margin-left: 20%;
   position: absolute;
+  cursor: pointer;
+}
+
+#table-available-movies tr .image_box .schedule_container:hover {
+  opacity: 100%;
+  color: black;
+  cursor: pointer;
 }
 
 #table-available-movies tr .image_box .schedule_container .text_btn {
   font-size: large;
-  cursor: pointer;
+}
+
+#table-available-movies tr .image_box .schedule_container .text_btn:hover {
+  color: #367588;
 }
 
 #table-available-movies tr .image_box p {
   position: relative;
+}
+
+@media only screen and (max-width: 1140px) {
+  .schedule_container {
+    margin: auto !important;
+  }
+  .text_btn {
+    font-size: small !important;
+  }
 }
