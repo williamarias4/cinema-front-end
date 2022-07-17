@@ -1,7 +1,7 @@
 //POSTER PATH IS IMG
 
 import getFetch from '/assets/js/fetch-method.js';
-import {style_outside_element_onhover} from '/assets/js/style-element.js';
+import { style_outside_element_onhover } from '/assets/js/style-element.js';
 
 let generate_url = (base_url, id, query_string, api_key) =>
     base_url + id + query_string + api_key;
@@ -87,6 +87,9 @@ function load_available_movies(movie) {
                 let img = document.createElement("img");
                 img.src = moviedb.base_img_url + movie.poster_path;
 
+                style_outside_element_onhover(div_schedule_container, img);
+                style_outside_element_onhover(img, img);
+
                 col.appendChild(div_class_image_box);
                 div_class_image_box.appendChild(img);
                 div_schedule_container.appendChild(btn_schedule);
@@ -115,6 +118,9 @@ function load_available_movies(movie) {
 
                 let img = document.createElement("img");
                 img.src = moviedb.base_img_url + movie.poster_path;
+
+                style_outside_element_onhover(div_schedule_container, img);
+                style_outside_element_onhover(img, img);
 
                 //col.appendChild(img);
                 col.appendChild(div_class_image_box);
