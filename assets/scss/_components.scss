@@ -122,3 +122,29 @@ h2 {
         font-size: small !important;
     }
 }
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    #table-available-movies {
+        padding-top: 20px;
+
+        tr {
+            .image_box {
+
+                img {
+                    width: 95%;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                box-shadow: none;
+                width: 150px;
+                //height: 359px;
+
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
