@@ -1,12 +1,10 @@
 //POSTER PATH IS IMG
 
 import getFetch from '/assets/js/fetch-method.js';
+import {style_outside_element_onhover} from '/assets/js/style-element.js';
 
 let generate_url = (base_url, id, query_string, api_key) =>
     base_url + id + query_string + api_key;
-
-var isMouseHoverDiv = false;
-var isMouseHoverImg = false;
 
 
 function load_available_movies(movie) {
@@ -45,49 +43,17 @@ function load_available_movies(movie) {
             let br2 = document.createElement("br");
 
             let p_movie_title = document.createElement("p");
-            //p_movie_title.setAttribute('class', 'testclass');
             p_movie_title.textContent = movie.original_title;
 
             let img = document.createElement("img");
-            //img.setAttribute('id', 'test');
             img.src = moviedb.base_img_url + movie.poster_path;
 
-            div_schedule_container.addEventListener('mouseover', function () {
-                isMouseHoverDiv = true;
-                if (isMouseHoverDiv === true || isMouseHoverImg === true) {
-                    img.style.width = "100%";
-                    img.style.opacity = "20%";
-                }
-            })
-            div_schedule_container.addEventListener('mouseout', function () {
-                isMouseHoverDiv = false;
-                if (isMouseHoverDiv === false && isMouseHoverImg === false) {
-                    img.style.width = "90%";
-                    img.style.opacity = "100%";
-                }
-            })
+            style_outside_element_onhover(div_schedule_container, img);
 
-            img.addEventListener('mouseover', function () {
-                isMouseHoverDiv = true;
-                if (isMouseHoverDiv === true || isMouseHoverImg === true) {
-                    img.style.width = "100%";
-                    img.style.opacity = "20%";
-                }
-            })
-            img.addEventListener('mouseout', function () {
-                isMouseHoverDiv = false;
-                if (isMouseHoverDiv === false && isMouseHoverImg === false) {
-                    img.style.width = "90%";
-                    img.style.opacity = "100%";
-                }
-
-            })
-
+            style_outside_element_onhover(img, img);
 
             col.appendChild(div_class_image_box);
-            //col.appendChild(img);
             div_class_image_box.appendChild(img);
-            //div.appendChild(p);
             div_schedule_container.appendChild(btn_schedule);
             div_schedule_container.appendChild(br);
             div_schedule_container.appendChild(btn_schedule2);
@@ -172,14 +138,14 @@ let get_movie_list = (data) => {
     }
 }
 
+
+
 let get_movies_id = () => getFetch(moviedb.movie_ids_path, get_movie_list);
 
 //window.onload gives an exception
 //document.onload = () => load_available_movies();
 
 get_movies_id();
-
-//test();
 
 //getJSON(generate_url(moviedb.base_url, "315635", moviedb.api_query_param, moviedb.api_key));
 
