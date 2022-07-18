@@ -6,6 +6,15 @@ function getFetch(url, callback) {
         },
     }).then(response => response.json()
     ).then(data => {
+        callback(data)
+    }), function (error) { //switch to arrow
+        console.log(error);
+    }
+}
+
+function get_fetch_text(url, callback) {
+    fetch(url).then(response => response.text()
+    ).then(data => {
         //console.log(info)
         callback(data)
         //console.log(info.id)
@@ -49,4 +58,4 @@ function postJSON(url, callback, method, body) {
     error.message //=> String
   })*/
 
-export default getFetch;
+export {getFetch, get_fetch_text};
