@@ -1,6 +1,6 @@
 //POSTER PATH IS IMG
 
-import getFetch from '/assets/js/fetch-method.js';
+import { getFetch } from '/assets/js/fetch-method.js';
 import { style_outside_element_onhover } from '/assets/js/style-element.js';
 
 let generate_url = (base_url, id, query_string, api_key) =>
@@ -19,7 +19,6 @@ function load_available_movies(movie) {
 
             let div_class_image_box = document.createElement("div");
             div_class_image_box.setAttribute('class', 'image_box');
-            //div.setAttribute('style', 'width:200px; height:359px;');
 
             let div_schedule_container = document.createElement("div");
             div_schedule_container.setAttribute('class', 'schedule_container');
@@ -72,7 +71,6 @@ function load_available_movies(movie) {
 
                 let div_class_image_box = document.createElement("div");
                 div_class_image_box.setAttribute('class', 'image_box');
-                //div.setAttribute('style', 'width:200px; height:359px;');
 
                 let div_schedule_container = document.createElement("div");
                 div_schedule_container.setAttribute('class', 'schedule_container');
@@ -95,7 +93,6 @@ function load_available_movies(movie) {
                 div_schedule_container.appendChild(btn_schedule);
                 div_class_image_box.appendChild(div_schedule_container);
                 div_class_image_box.appendChild(p_movie_title);
-                //col.appendChild(img);
             }
             else if (cols_length_aux === movie_table_size.cols && rows_length_aux < movie_table_size.rows) {
                 let row = table.insertRow();
@@ -104,7 +101,6 @@ function load_available_movies(movie) {
 
                 let div_class_image_box = document.createElement("div");
                 div_class_image_box.setAttribute('class', 'image_box');
-                //div.setAttribute('style', 'width:200px; height:359px;');
 
                 let div_schedule_container = document.createElement("div");
                 div_schedule_container.setAttribute('class', 'schedule_container');
@@ -122,7 +118,6 @@ function load_available_movies(movie) {
                 style_outside_element_onhover(div_schedule_container, img);
                 style_outside_element_onhover(img, img);
 
-                //col.appendChild(img);
                 col.appendChild(div_class_image_box);
                 div_class_image_box.appendChild(img);
                 div_schedule_container.appendChild(btn_schedule);
