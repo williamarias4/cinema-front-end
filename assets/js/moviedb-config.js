@@ -11,3 +11,4 @@ const movie_table_size = {
     cols: 6
 }
 
+
