@@ -12,11 +12,18 @@ function getFetch(url, callback) {
     }
 }
 
+/*const fetchCourses = async args => {
+    const res = await fetch("/sections/navbar.html");
+    const body = await res.text();
+    return body;
+  };*/
+
+
 function get_fetch_text(url, callback) {
     fetch(url).then(response => response.text()
     ).then(data => {
         //console.log(info)
-        callback(data)
+        callback(data);
         //console.log(info.id)
         //console.log(info.original_title)
     }), function (error) { //switch to arrow
