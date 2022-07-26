@@ -1,6 +1,7 @@
 
 import { debounce } from '/assets/js/throttle.js'
 
+export default function load_nav_toggle(){
 (function ($) {
   $(function () {
     $("nav ul li > a:not(:only-child)").click(/*debounce*/(function (e) {
@@ -20,3 +21,4 @@ import { debounce } from '/assets/js/throttle.js'
     }));
   });
 })(jQuery);
+}

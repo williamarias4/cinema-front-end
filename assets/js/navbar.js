@@ -1,6 +1,7 @@
 
 import { get_fetch_text } from '/assets/js/fetch-method.js'
 import * as navlinks from '/assets/js/navlink-config.js'
+import load_nav_toggle from '/assets/js/nav-hamburguer.js'
 
 function nav_list() {
 
@@ -47,11 +48,14 @@ function add_search_bar(){
     nav_list.appendChild(search_bar);
 }
 
-function add_navbar(navbar_text) {
+async function add_navbar(navbar_text) {
     let header = document.getElementsByTagName('header')[0];
     header.innerHTML = navbar_text;
-    //nav_list();
+    nav_list();
+    load_nav_toggle();
 }
+
+get_fetch_text("/sections/navbar.html", add_navbar);
 
 /*function create_navbar() {
 
@@ -96,5 +100,5 @@ function add_navbar(navbar_text) {
 }*/
 
 
-get_fetch_text("/sections/navbar.html", add_navbar);
+
 //create_navbar();
