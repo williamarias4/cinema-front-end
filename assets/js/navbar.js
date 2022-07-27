@@ -3,7 +3,7 @@ import { get_fetch_text } from '/assets/js/fetch-method.js'
 import * as navlinks from '/assets/js/navlink-config.js'
 import load_nav_toggle from '/assets/js/nav-hamburguer.js'
 
-function nav_list() {
+function nav_list() { 
 
     navlinks.index_guest.forEach(element => {
         let nav_list = document.getElementsByClassName('nav-list')[0];
@@ -20,7 +20,7 @@ function nav_list() {
     add_search_bar();
 }
 
-function add_search_bar(){
+function add_search_bar() {
 
     let nav_list = document.getElementsByClassName('nav-list')[0];
 
@@ -48,7 +48,7 @@ function add_search_bar(){
     nav_list.appendChild(search_bar);
 }
 
-async function add_navbar(navbar_text) {
+function add_navbar(navbar_text) {
     let header = document.getElementsByTagName('header')[0];
     header.innerHTML = navbar_text;
     nav_list();
