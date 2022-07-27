@@ -9,6 +9,7 @@ function nav_list() {
         let nav_list = document.getElementsByClassName('nav-list')[0];
         let link = document.createElement('li');
         let a = document.createElement('a');
+       // a.style.color = 'white';
 
         a.setAttribute('href', element.LINK);
         a.textContent = element.TEXT;
