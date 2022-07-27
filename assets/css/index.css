@@ -170,6 +170,7 @@ button {
   padding: 12px;
   font-size: large;
   color: white;
+  cursor: pointer;
 }
 
 input[type=search] {
