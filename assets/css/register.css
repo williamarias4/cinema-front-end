@@ -211,14 +211,18 @@ body {
   background-size: auto;
 }
 
+section {
+  text-align: center;
+}
+
 .form-container {
+  display: inline-block;
   width: 30%;
   background-color: white;
   border-style: solid;
   border-radius: 5px;
   border-color: white;
   padding: 2%;
-  margin: auto;
   margin-top: 10%;
 }
 
@@ -275,10 +279,6 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
-  body {
-    background-image: url("/assets/imgs/background-3-mobile.jpg");
-    background-size: auto;
-  }
   .form-container {
     width: 40%;
     margin-top: 5%;

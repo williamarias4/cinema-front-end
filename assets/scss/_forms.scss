@@ -1,17 +1,25 @@
+
 body {
     background-image: url('/assets/imgs/background-3.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
 
+section {
+    text-align: center;
+}
+
 .form-container {
+    display: inline-block;
+
     width: 30%;
     background-color: white;
     border-style: solid;
     border-radius: 5px;
     border-color: white;
     padding: 2%;
-    margin: auto;
+    //margin: 13%;
+    //margin: auto;
     margin-top: 10%;
 
     form {
@@ -76,18 +84,13 @@ body {
     }
 }
 
+
 @media only screen and (max-width: $breakpoint-large) {
-
-
-    body {
-        background-image: url('/assets/imgs/background-3-mobile.jpg');
-        background-size: auto;
-
-    }
 
     .form-container {
         width: 40%;
         margin-top: 5%;
+
         form {
 
 
@@ -113,6 +116,7 @@ body {
 }
 
 @media only screen and (max-width: $breakpoint-mid) {
+
     .form-container {
         margin-top: 15%;
         width: 70%;
