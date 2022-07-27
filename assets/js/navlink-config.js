@@ -33,7 +33,7 @@ export const nav_items = {
 
     REGISTER: {
         TEXT: "Register",
-        LINK: "#"
+        LINK: "/register.html"
     },
     LOG_IN: {
         TEXT: "Login",
