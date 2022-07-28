@@ -204,3 +204,147 @@ h2 {
   display: block;
   text-align: center;
 }
+
+body {
+  background-image: url("/assets/imgs/background-3.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+section {
+  text-align: center;
+}
+
+.form-container {
+  display: inline-block;
+  width: 30%;
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 2%;
+  margin-top: 10%;
+}
+
+.form-container form .form-description {
+  text-align: center;
+}
+
+.form-container form .form-description h2 {
+  margin-top: 0;
+}
+
+.form-container form .form-inputs {
+  display: block;
+}
+
+.form-container form .form-inputs .input-form {
+  font-size: medium;
+  border: none;
+  background-color: #DEDEDE;
+  padding: 3%;
+  margin: 1%;
+}
+
+.form-container form .form-inputs #first-name {
+  width: 40%;
+}
+
+.form-container form .form-inputs #last-name {
+  width: 40%;
+}
+
+.form-container form .form-inputs #username {
+  width: 89%;
+}
+
+.form-container form .form-inputs #email {
+  width: 89%;
+}
+
+.form-container form .form-inputs #passw {
+  width: 89%;
+}
+
+.form-container form button {
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 95%;
+  background-color: #367588;
+  border-radius: 0;
+}
+
+.form-container form button:hover {
+  background-color: #2f4f4f;
+}
+
+@media only screen and (max-width: 1400px) {
+  .form-container {
+    width: 40%;
+    margin-top: 5%;
+  }
+  .form-container form .form-inputs .input-form {
+    font-size: medium;
+    margin: 2%;
+    padding: 5%;
+    width: 88% !important;
+  }
+  .form-container form button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .form-container {
+    margin-top: 15%;
+    width: 75%;
+    margin-bottom: 15%;
+  }
+}
+
+.login-attributes {
+  padding-left: 1%;
+  margin: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.login-attributes #remember-me-container {
+  float: left;
+  font-size: medium;
+}
+
+.login-attributes #remember-me-container #remember-me {
+  vertical-align: middle;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.login-attributes a {
+  color: #367588;
+  float: right;
+  margin-bottom: 3%;
+  cursor: pointer;
+}
+
+.login-attributes a:hover {
+  color: #2f4f4f;
+}
+
+@media only screen and (max-width: 700px) {
+  .login-attributes {
+    padding-left: 1%;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 18% !important;
+    font-size: small;
+  }
+  .login-attributes #remember-me-container {
+    font-size: small;
+  }
+  .login-attributes #remember-me-container #remember-me {
+    vertical-align: middle;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
