@@ -12,3 +12,55 @@
 @import 'forms';
 
 // utilities (margin, padding, opacity)
+
+
+.form-options {
+    padding-left: 1%;
+    margin: 2%;
+    margin-top: 3%;
+    margin-bottom: 9%;
+
+    .checkbox-container {
+
+        float: left;
+        font-size: medium;
+
+        .chckbox {
+            vertical-align: middle;
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
+        span{
+            color:$btn-bluegreen-color;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .form-options {
+        position: relative;
+        left: -15px !important;
+        padding-left: 1%;
+        margin: 2%;
+        margin-top: 5%;
+        margin-bottom: 19%;
+
+        .checkbox-container {
+            width: 110%;
+            font-size: small;
+
+            .chckbox {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+            span {
+                color:$btn-bluegreen-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
